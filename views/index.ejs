@@ -1,0 +1,107 @@
+<% layout('layouts/boilerplate')%>
+
+    <header>
+        <div class="logo">
+            <img src="img/devjane.png" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">portfolio</a></li>
+            </ul>
+        </nav>
+        </header>
+        <!-- Introduction-->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi I am <strong>Hazel Tate</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Full Stack Dev</p>
+            <img src="img/Hazel-01_50.png" alt="a picture of Hazel" class="intro__img">
+        </section>
+
+<!--my services -->
+
+<section class="my-services" id="services">
+    <h2 class="section__title section__title--services">What I do</h2>
+    <div class="services">
+        <div class="service first">
+            <h3>Front end</h3>
+            <p>"As A front end designer I am always looking for ways to make clients dreams become a reality.
+                My experince in CSS HTML and Javascript makes me perfectly suited for any task"</p>
+        </div>
+        <div class="service">
+            <h3>Back End</h3>
+            <p>I love working with logic and Databases. This is what truly speaks to me. I have experince with
+                both Express and Mongodb as well as Django and Flask
+            </p>
+        </div>
+        <div class="service">
+            <h3>Design</h3>
+            <p>Design is such an interesting challenge. I love going through and finding the perfect font, the most exact layout and the colors that woll make a site pop. working
+                with clients to take the bare bones of a project into a full design is so rewarding
+            </p>
+        </div>
+    </div>
+    <a href="work" class="btn">My Work</a>
+</section>
+
+<!--about me-->
+<section class=about-me id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about">A developer based in OKC</p>
+    <div class="about-me__body">
+        <p>I came to development late in life but am absolutelty loving it. I spend hour after hour at my computer
+            working on personal projects or learning new skills whenever I'm not working for my clients. It's most important thing I do
+        </p>
+        <p>When I am not coding I love to bike throughout OKC. I also have a passion for cooking</p>
+    </div>
+    <img src="img/hazel-2.jpg" class="about-me__img" alt="">
+</section>
+    <!--My Work-->
+<section class="my--work" id="work">
+    <h2 class="section__title">My Work</h2>
+    <p class="section__subtitle">Some of my projects </p>
+    <div class="portfolio"><a href="#" class="portfolio__item">
+            
+        </a>
+        <% projects.forEach(project => { %>
+         <a href="/projects/<%= project._id %> " class="portfolio__item">
+            <img src="<%= project.images.url %> " alt="" class="portfolio__img">
+        </a>
+        <% }) %>
+        
+        <a href="#" class="portfolio__item">
+            <img src="img/portfolio-03.jpg" alt="" class="portfolio__img">
+        </a>
+        <a href="#" class="portfolio__item">
+            <img src="img/portfolio-04.jpg" alt="" class="portfolio__img">
+        </a>
+        <a href="#" class="portfolio__item">
+            <img src="img/portfolio-05.jpg" alt="" class="portfolio__img">
+        </a> 
+        <a href="#" class="portfolio__item">
+            <img src="img/portfolio-06.jpg" alt="" class="portfolio__img">
+        </a>
+        
+
+        
+
+    </div>
+</section>
+
+<!--footer-->
+<footer  class="footer">
+    <a href=":mailto:Hazel.j.tate@gmail.com" class="footer__link">Hazel.J.Tate@gmail.com</a>
+    <ul class="social-list">
+        <li class="social-list__item"><a class="social-list__link" href=""><i class="fab fa-github"></i></a></li>
+        <li class="social-list__item"><a class="social-list__link" href=""><i class="fab fa-linkedin"></i></a></li>
+        <li class="social-list__item"><a class="social-list__link" href=""><i class="fab fa-linkedin"></i></a></li>
+
+    </ul>
+</footer>

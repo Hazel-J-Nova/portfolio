@@ -1,0 +1,17 @@
+input{
+    width: 100%;
+    
+}
+input[type=text]{
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.text-area{
+    padding: 12px;
+    margin: 8px 0;
+}
+
+.container{
+    margin: auto;
+}
