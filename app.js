@@ -66,13 +66,14 @@ const store = MongoStore.create({
 
 
 const sessionConfig = {
-    store:store,
+    store: store,
+    secret:secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-        secret:secret,
+        
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 };
