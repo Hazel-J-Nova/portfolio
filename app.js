@@ -54,6 +54,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
+console.log(secret)
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
@@ -71,6 +72,7 @@ const sessionConfig = {
     cookie: {
         httpOnly: true,
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        secret:secret,
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 };
